@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import insta from '../assets/insta.png';
-import github from '../assets/github.png';
-import twitter from '../assets/twitter.png';
-import linked from '../assets/linked.png';
 import logo from '../assets/logoi.png';
 import nightmod1 from '../assets/nightmod1.png';
 import { Link } from "react-router-dom";
@@ -55,36 +51,6 @@ const Navbar = () => {
           <li className='p-2'><Link to="/AboutPage">About</Link></li>
           <li className='p-2'><Link to="/ProjectsPage">Projects</Link></li>
           <li className='p-2'><Link to="/ContactsPage">Contact</Link></li>
-        </ul>
-        <ul className='flex space-x-4 p-8 ml-[20%]'>
-          <li>
-            <img 
-              className="icon transition-transform duration-300 hover:scale-110" 
-              src={insta} 
-              alt="Instagram" 
-            />
-          </li>
-          <li>
-            <img 
-              className="icon transition-transform duration-300 hover:scale-110" 
-              src={linked} 
-              alt="LinkedIn" 
-            />
-          </li>
-          <li>
-            <img 
-              className="icon transition-transform duration-300 hover:scale-110" 
-              src={github} 
-              alt="GitHub" 
-            />
-          </li>
-          <li>
-            <img 
-              className="icon transition-transform duration-300 hover:scale-110" 
-              src={twitter} 
-              alt="Twitter" 
-            />
-          </li>
         </ul>
       </div>
 
