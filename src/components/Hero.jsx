@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';import { Link } from 'react-router-dom';
 import Profile from '../assets/Profile.png';
 import { TypeAnimation } from 'react-type-animation';
 import { FaInstagram, FaGithub, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
@@ -19,11 +19,7 @@ const Hero = () => {
 
             <img
               className='block mx-auto floating mb-[10%] md:mr-[50%] md:mb-[10%] md:mt-[25%] lg:mt-[35%] lg:mb-[15%] mt-[5%] z-[-1] md:w-[226px] w-[50%]'
-              src={Profile}
-              alt='Profile'
-            />
-
-            
+              src={Profile}              alt='Profile'            />
           </div>
 
           <div className='lg:col-span-8 md:col-span-5 min-h-[200px]'>
@@ -47,25 +43,19 @@ const Hero = () => {
             <div>
               <p className="font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white">
                 I turn ideas into
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">
-                  <a href="/ProjectsPage">PROJECTS</a>
+                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/ProjectsPage">PROJECTS</Link>
                 </span>
                 and craft seamless, interactive experiences with clean, efficient code. Minimalism drives my design, where I find beauty in simplicity and order. Let’s connect!
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">
-                  <a href="/ContactsPage">CONTACT</a>
+                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/ContactsPage">CONTACT</Link>
                 </span>
                 me to collaborate or chat.
               </p>
             </div>
             <div>
               <p className='font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mb-[5%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white'>
-                <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">
-                  <a href="/AboutPage">See More About Me</a>
-                </span>
-                <span className="arrow ml-3 cursor-pointer hover:text-blue-500">&rarr;</span>
-                
+                <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">                  <Link to="/AboutPage">See More About Me</Link>
+                </span>                <span className="arrow ml-3 cursor-pointer hover:text-blue-500">&rarr;</span>
               </p>
-              
             </div>
           </div>
         </div>

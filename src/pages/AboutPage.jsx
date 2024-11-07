@@ -27,7 +27,7 @@ const About = () => {
       >
         {/* Flex container for About Me heading and vertical line */}
         <div className="flex items-center mb-10 mt-0">
-          <motion.h1 className="text-5xl text-left ml-[150px] mr-7 font-extrabold text-gray-100" variants={slideIn}>
+          <motion.h1 className="text-5xl text-left ml-[20%] mr-7 font-extrabold text-gray-100" variants={slideIn}>
             About Me
           </motion.h1>
           {/* Vertical line */}
@@ -45,7 +45,7 @@ const About = () => {
         </motion.div>
         
 
-        <motion.div className="grid grid-cols-1 gap-6 ml-[150px] mt-[50px] mb-[100px] justify-center" variants={fadeIn}>
+        <motion.div className="grid grid-cols-1 gap-6 ml-[20%] mt-[50px] mb-[100px] justify-center" variants={fadeIn}>
           <div className="flex text-gray-300 text-left items-center ">
             <FaCode className="text-blue-400 text-3xl mr-3" />
             <span> <strong>Programming:</strong> Java, Python, HTML, CSS, JavaScript</span>

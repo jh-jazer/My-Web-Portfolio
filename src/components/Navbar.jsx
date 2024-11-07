@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/logoi.png';
 import nightmod1 from '../assets/nightmod1.png';
@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const navbarRef = useRef(null); // Ref for the navbar
 
   const handleNav = () => {
     setNav(!nav);
@@ -17,8 +18,25 @@ const Navbar = () => {
     setTimeout(() => setShowMessage(false), 3000); // Hide message after 3 seconds
   };
 
+  // Close the dropdown if clicked outside of the navbar
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setNav(false); // Close the navbar menu
+      }
+    };
+
+    // Add event listener to detect clicks outside
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className='h-[96px] glass px-8 text-gray-300 max-w-[1200px] flex justify-between items-center mx-auto mt-3 z-50 relative'>
+    <div className='h-[96px] glass px-8 text-gray-300 max-w-[1200px] flex justify-between items-center mx-auto mt-3 z-50 relative' ref={navbarRef}>
       <Link to="/">
         <img src={logo} alt='logo' className='logo' />
       </Link>
@@ -45,16 +63,29 @@ const Navbar = () => {
         {nav ? <AiOutlineClose size={30}/> : <AiOutlineMenu size={30}/>}
       </div>
 
-      <div className={nav ? 'text-gray-300 z-40 fixed left-0 top-0 w-full bg-[#232323] ease-in-out duration-500' : 'fixed left-[100%] z-40'}>
-        <ul className='p-8 text-4xl ml-20 z-50'>
-          <li className='p-2'><Link to="/">Home</Link></li>
-          <li className='p-2'><Link to="/AboutPage">About</Link></li>
-          <li className='p-2'><Link to="/ProjectsPage">Projects</Link></li>
-          <li className='p-2'><Link to="/ContactsPage">Contact</Link></li>
-        </ul>
-      </div>
+      {/* Mobile Menu - Adjusted top position */}
+      {nav && (
+        <div className='fixed top-0 left-0 w-full h-full bg-[#232323] text-gray-300 z-50 ease-in-out duration-500 flex justify-center items-center pt-[150px]'>
+          <div className='w-full'>
+            <ul className='text-center text-3xl font-semibold px-8'>
+              <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
+                <Link to="/" onClick={handleNav} className="block">Home</Link>
+              </li>
+              <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
+                <Link to="/AboutPage" onClick={handleNav} className="block">About</Link>
+              </li>
+              <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
+                <Link to="/ProjectsPage" onClick={handleNav} className="block">Projects</Link>
+              </li>
+              <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
+                <Link to="/ContactsPage" onClick={handleNav} className="block">Contact</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
 
-      {/* Message for night mode feature */}
+      {/* Night mode feature message */}
       {showMessage && (
         <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-gray-300 p-4 rounded shadow-lg z-50">
           This feature is still in development!
