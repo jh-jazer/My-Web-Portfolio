@@ -43,17 +43,17 @@ const Hero = () => {
             <div>
               <p className="font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white">
                 I turn ideas into
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/ProjectsPage">PROJECTS</Link>
+                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/projects">PROJECTS</Link>
                 </span>
                 and craft seamless, interactive experiences with clean, efficient code. Minimalism drives my design, where I find beauty in simplicity and order. Let’s connect!
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/ContactsPage">CONTACT</Link>
+                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/contacts">CONTACT</Link>
                 </span>
                 me to collaborate or chat.
               </p>
             </div>
             <div>
               <p className='font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mb-[5%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white'>
-                <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">                  <Link to="/AboutPage">See More About Me</Link>
+                <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">                  <Link to="/about">See More About Me</Link>
                 </span>                <span className="arrow ml-3 cursor-pointer hover:text-blue-500">&rarr;</span>
               </p>
             </div>

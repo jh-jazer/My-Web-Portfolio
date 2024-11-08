@@ -43,13 +43,13 @@ const Navbar = () => {
 
       <ul className='hidden md:flex'>
         <li className='p-3 hover:text-white transition duration-300'>
-          <Link to="/AboutPage">ABOUT</Link>
+          <Link to="/about">ABOUT</Link>
         </li>
         <li className='p-3 hover:text-white transition duration-300'>
-          <Link to="/ProjectsPage">PROJECTS</Link>
+          <Link to="/projects">PROJECTS</Link>
         </li>
         <li className='p-3 hover:text-white transition duration-300'>
-          <Link to="/ContactsPage">CONTACT</Link>
+          <Link to="/contacts">CONTACT</Link>
         </li>
         <img 
           className='icon cursor-pointer' 
@@ -72,13 +72,13 @@ const Navbar = () => {
                 <Link to="/" onClick={handleNav} className="block">Home</Link>
               </li>
               <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
-                <Link to="/AboutPage" onClick={handleNav} className="block">About</Link>
+                <Link to="/about" onClick={handleNav} className="block">About</Link>
               </li>
               <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
-                <Link to="/ProjectsPage" onClick={handleNav} className="block">Projects</Link>
+                <Link to="/projects" onClick={handleNav} className="block">Projects</Link>
               </li>
               <li className='p-6 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors'>
-                <Link to="/ContactsPage" onClick={handleNav} className="block">Contact</Link>
+                <Link to="/contacts" onClick={handleNav} className="block">Contact</Link>
               </li>
             </ul>
           </div>

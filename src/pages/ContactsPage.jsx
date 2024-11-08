@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,42 +16,48 @@ const Contact = () => {
 
   const handleChange = (e) => {
     const { id, value } = e.target;
-    setFormData({ ...formData, [id]: value });
+    setFormData((prevState) => ({ ...prevState, [id]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setError('');
-    setIsLoading(true); // Start loading state
+    setIsLoading(true);
 
     // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
-      setError('All fields are required');
-      setIsLoading(false); // End loading state
+      setError('All fields are required.');
+      setIsLoading(false);
       return;
     }
 
-    try {
-      const response = await fetch('https://portfolio-backend-ee65-murex.vercel.app/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormData({ name: '', email: '', message: '' }); // Reset the form
-        setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
-      } else {
-        setError('Failed to send message. Please try again.');
-      }
-    } catch (err) {
-      setError('An error occurred. Please try again later.');
-    } finally {
-      setIsLoading(false); // End loading state
-    }
+    
+    emailjs
+      .send(
+        'service_ynh9wft', 
+        'template_mtd9y7u', 
+        templateParams,
+        'jCYB9tr2KkqV0xSZf' 
+      )
+      .then(
+        (response) => {
+          setIsSubmitted(true);
+          setFormData({ name: '', email: '', message: '' }); // Reset form
+          setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
+        },
+        (err) => {
+          setError('Failed to send message. Please try again.');
+        }
+      )
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -69,7 +76,7 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Name"
                 required
-                aria-label="Your Name" // Updated to aria-label
+                aria-label="Your Name"
                 autoComplete="name"
               />
             </div>
@@ -82,7 +89,7 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Email"
                 required
-                aria-label="Your Email" // Updated to aria-label
+                aria-label="Your Email"
                 autoComplete="email"
               />
             </div>
@@ -95,7 +102,7 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Message"
                 required
-                aria-label="Your Message" // Updated to aria-label
+                aria-label="Your Message"
                 autoComplete="off"
               ></textarea>
             </div>
@@ -105,9 +112,9 @@ const Contact = () => {
               <button
                 type="submit"
                 className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-200"
-                disabled={isLoading} // Disable button while loading
+                disabled={isLoading}
               >
-                {isLoading ? 'Sending...' : 'Send Message'} {/* Change button text based on loading state */}
+                {isLoading ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>
