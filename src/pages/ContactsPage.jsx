@@ -61,7 +61,6 @@ const Contact = () => {
         <div className="max-w-lg mx-auto">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" id="name-label" className="sr-only">Your Name</label>
               <input
                 type="text"
                 id="name"
@@ -70,12 +69,11 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Name"
                 required
-                aria-labelledby="name-label"
+                aria-label="Your Name" // Updated to aria-label
                 autoComplete="name"
               />
             </div>
             <div>
-              <label htmlFor="email" id="email-label" className="sr-only">Your Email</label>
               <input
                 type="email"
                 id="email"
@@ -84,12 +82,11 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Email"
                 required
-                aria-labelledby="email-label"
+                aria-label="Your Email" // Updated to aria-label
                 autoComplete="email"
               />
             </div>
             <div>
-              <label htmlFor="message" id="message-label" className="sr-only">Your Message</label>
               <textarea
                 id="message"
                 rows="4"
@@ -98,7 +95,7 @@ const Contact = () => {
                 className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-blue-500"
                 placeholder="Your Message"
                 required
-                aria-labelledby="message-label"
+                aria-label="Your Message" // Updated to aria-label
                 autoComplete="off"
               ></textarea>
             </div>
