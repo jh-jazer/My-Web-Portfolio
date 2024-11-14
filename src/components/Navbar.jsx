@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import logo from '../assets/logoi.png';
-import nightmod1 from '../assets/nightmod1.png';
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -51,12 +50,7 @@ const Navbar = () => {
         <li className='p-3 hover:text-white transition duration-300'>
           <Link to="/contacts">CONTACT</Link>
         </li>
-        <img 
-          className='icon cursor-pointer' 
-          src={nightmod1} 
-          alt='night mode toggle' 
-          onClick={handleNightModeClick}
-        />
+      
       </ul>
 
       <div onClick={handleNav} className='block md:hidden text-gray-300 fixed right-10 top-8 z-50'>
@@ -85,12 +79,7 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Night mode feature message */}
-      {showMessage && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-800 text-gray-300 p-4 rounded shadow-lg z-50">
-          This feature is still in development!
-        </div>
-      )}
+     
     </div>
   );
 };
