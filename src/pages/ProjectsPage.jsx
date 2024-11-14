@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import startupImg from '../assets/startupext.png';
 import deeptokImg from '../assets/deeptok.png';
 import fastfoodImg from '../assets/fastfood.png';
+import cvsuImg from '../assets/cvsu.png';  // Import the new project image
 import Footer from '../components/Footer';
 import React from 'react';
 
@@ -42,7 +43,7 @@ const ProjectsPage = () => {
   return (
     <div>
       <Navbar />
-      
+
       <div className="glass-projects my-20 px-4">
         <h2 className="text-4xl font-bold text-white text-center mb-10">
           Dev Projects
@@ -58,7 +59,7 @@ const ProjectsPage = () => {
             variants={cardVariants}
             onClick={handleDevProjectClick}
           >
-            <img src={startupImg} alt="InspireSpace" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <img src={startupImg} alt="InspireSpace project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
             <h3 className="text-xl text-white font-semibold mb-2">InspireSpace</h3>
             <p className="text-gray-300 mb-4">A dynamic online platform designed to ignite creativity and foster collaboration among hobbyists...</p>
             <a href="#" className="text-blue-500 hover:underline">Built with: HTML, CSS, JavaScript</a>
@@ -72,7 +73,7 @@ const ProjectsPage = () => {
             variants={cardVariants}
             onClick={handleDevProjectClick}
           >
-            <img src={deeptokImg} alt="Deeptok" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <img src={deeptokImg} alt="Deeptok project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
             <h3 className="text-xl text-white font-semibold mb-2">Deeptok</h3>
             <p className="text-gray-300 mb-4">A responsive web application designed to generate unique questions that inspire deep and meaningful conversations...</p>
             <a href="#" className="text-blue-500 hover:underline">Built with: Vite, React, Tailwind CSS</a>
@@ -86,10 +87,24 @@ const ProjectsPage = () => {
             variants={cardVariants}
             onClick={handleDevProjectClick}
           >
-            <img src={fastfoodImg} alt="Fastfood" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <img src={fastfoodImg} alt="Fastfood project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
             <h3 className="text-xl text-white font-semibold mb-2">Fastfood Management System</h3>
             <p className="text-gray-300 mb-4">It enables efficient management of menu items, order processing, and customer interactions...</p>
             <a href="#" className="text-blue-500 hover:underline">Built with: Java</a>
+          </motion.div>
+
+          {/* Add Cvsu Dashboard Design Project */}
+          <motion.div 
+            className="bg-gray-800 p-6 rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            initial="hidden"
+            animate="visible"
+            variants={cardVariants}
+          >
+            <img src={cvsuImg} alt="Cvsu Dashboard Design project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
+            <h3 className="text-xl text-white font-semibold mb-2">Cvsu Dashboard Design</h3>
+            <p className="text-gray-300 mb-4">A modern and responsive dashboard design for the university portal...</p>
+            <a href="https://cvsu-portal.vercel.app/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Project</a>
           </motion.div>
         </div>
 
@@ -109,8 +124,8 @@ const ProjectsPage = () => {
               variants={cardVariants}
               onClick={handleArtProjectClick}
             >
-              <img src={image} alt={`Art ${index + 1}`} className="w-full h-50 object-cover rounded-lg" />
-              
+              <img src={image} alt={`Art project ${index + 1}`} className="w-full h-50 object-cover rounded-lg" />
+
               {/* Like overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <span className="text-white text-lg font-semibold">{likes[index]} Likes</span>
@@ -119,6 +134,7 @@ const ProjectsPage = () => {
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );
