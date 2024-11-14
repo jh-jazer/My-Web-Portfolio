@@ -31,7 +31,7 @@ const Hero = () => {
                     1000,
                     "Web Designer",
                     1000,
-                    "Graphic Artist",
+                    "Visual Artist",
                     1000,
                   ]}
                   wrapper='span'

@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import { FaCode, FaPaintBrush, FaTools } from 'react-icons/fa';
 import React from 'react';
 import Footer from '../components/Footer';
+import { Link } from "react-router-dom";
 
 const About = () => {
   const fadeIn = {
@@ -59,6 +60,21 @@ const About = () => {
             <FaTools className="text-blue-400 text-3xl mr-3" />
             <span> <strong>Version Control:</strong> Git, GitHub</span>
           </div>
+        </motion.div>
+
+        {/* New Section for Art */}
+        <motion.div className="text-lg text-left ml-8 mb-[100px] text-gray-300 leading-relaxed tracking-wide" variants={fadeIn}>
+          <p>
+            Aside from my passion for technology, I'm also a visual artist. I use different canvases—both digital and traditional—to express creativity and emotions through my art. Whether it's sketching, painting, or experimenting with digital mediums, I enjoy exploring the intersection of art and technology.
+          </p>
+        </motion.div>
+
+        <motion.div className="flex justify-center mt-8" variants={fadeIn}>
+          <p className='font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mb-[5%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white'>
+            <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">                  <Link to="/projects">See Projects</Link>
+            </span>                
+            <span className="arrow ml-3 cursor-pointer hover:text-blue-500">&rarr;</span>
+          </p>
         </motion.div>
 
         <motion.p className="text-lg text-gray-300 leading-relaxed tracking-wide mb-6" variants={fadeIn}>
