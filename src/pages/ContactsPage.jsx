@@ -24,7 +24,6 @@ const Contact = () => {
     setError('');
     setIsLoading(true);
 
-    // Basic validation
     if (!formData.name || !formData.email || !formData.message) {
       setError('All fields are required.');
       setIsLoading(false);
@@ -37,21 +36,20 @@ const Contact = () => {
       message: formData.message,
     };
 
-    
     emailjs
       .send(
-        'service_ynh9wft', 
-        'template_mtd9y7u', 
+        'service_ynh9wft',
+        'template_mtd9y7u',
         templateParams,
-        'jCYB9tr2KkqV0xSZf' 
+        'jCYB9tr2KkqV0xSZf'
       )
       .then(
-        (response) => {
+        () => {
           setIsSubmitted(true);
-          setFormData({ name: '', email: '', message: '' }); // Reset form
-          setTimeout(() => setIsSubmitted(false), 3000); // Reset success message after 3 seconds
+          setFormData({ name: '', email: '', message: '' });
+          setTimeout(() => setIsSubmitted(false), 3000);
         },
-        (err) => {
+        () => {
           setError('Failed to send message. Please try again.');
         }
       )
@@ -66,6 +64,9 @@ const Contact = () => {
       <div className="glass-projects py-20">
         <h2 className="text-4xl font-bold text-white text-center mb-10">Contact Me</h2>
         <div className="max-w-lg mx-auto">
+         
+
+          {/* Contact Form */}
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <input

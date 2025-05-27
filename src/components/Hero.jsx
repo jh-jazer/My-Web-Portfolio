@@ -27,7 +27,7 @@ const Hero = () => {
               <span className='glitch-text'>
                 <TypeAnimation
                   sequence={[
-                    "Frontend Dev",
+                    "Full-Stack Dev",
                     1000,
                     "Web Designer",
                     1000,

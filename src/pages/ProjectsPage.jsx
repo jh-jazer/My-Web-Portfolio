@@ -1,11 +1,9 @@
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
-import startupImg from '../assets/startupext.png';
-import deeptokImg from '../assets/deeptok.png';
-import fastfoodImg from '../assets/fastfood.png';
 import cvsuImg from '../assets/cvsu.png';  // Import the new project image
 import Footer from '../components/Footer';
-import React from 'react';
+import { SiReact, SiTailwindcss, SiFigma } from 'react-icons/si';
+
 
 // Import art project images
 import art1 from '../assets/art1.png';
@@ -53,19 +51,40 @@ const ProjectsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           
 
-          {/* Add Cvsu Dashboard Design Project */}
-          <motion.div 
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
+         <motion.div 
+          className="bg-gray-800 p-6 rounded-lg shadow-lg"
+          whileHover={{ scale: 1.05 }}
+          initial="hidden"
+          animate="visible"
+          variants={cardVariants}
+        >
+          <img 
+            src={cvsuImg} 
+            alt="Cvsu Dashboard Design project thumbnail" 
+            className="w-full h-40 object-cover rounded-lg mb-4" 
+          />
+          <h3 className="text-xl text-white font-semibold mb-2">CvSU Bacoor Portal</h3>
+          <p className="text-gray-300 mb-4">
+is a responsive university portal built with React and Tailwind CSS. It provides an easy-to-use interface for managing courses, grades, and announcements, offering a clean, efficient hub for students and staff.          </p>
+
+          {/* 🔧 Technology Icons Section */}
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex items-center text-gray-300 gap-2">
+              <SiReact size={24} title="React" />
+              <SiTailwindcss size={24} title="Tailwind CSS" />
+              <SiFigma size={24} title="Figma" />
+            </div>
+          </div>
+
+          <a 
+            href="https://cvsu-system.vercel.app/" 
+            className="text-blue-500 hover:underline" 
+            target="_blank" 
+            rel="noopener noreferrer"
           >
-            <img src={cvsuImg} alt="Cvsu Dashboard Design project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
-            <h3 className="text-xl text-white font-semibold mb-2">Cvsu Dashboard Design</h3>
-            <p className="text-gray-300 mb-4">A modern and responsive dashboard design for the university portal...</p>
-            <a href="https://cvsu-system.vercel.app/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Project</a>
-          </motion.div>
+            View Project
+          </a>
+        </motion.div>
         </div>
 
         {/* Art Projects Section */}
