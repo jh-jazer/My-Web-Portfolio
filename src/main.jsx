@@ -2,6 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import ProjectsPage from './pages/ProjectsPage.jsx';
+import SkillsPage from './pages/SkillsPage.jsx';
 import ContactsPage from './pages/ContactsPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import ResumePage from './pages/ResumePage.jsx';
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "/about",  // Fixed path to start with "/"
     element: <AboutPage />,
+  },
+   {
+    path: "/skills",  // Fixed path to start with "/"
+    element: <SkillsPage />,
   },
   {
     path: "/projects",  // Fixed path to start with "/"

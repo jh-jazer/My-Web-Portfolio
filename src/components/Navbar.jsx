@@ -55,6 +55,9 @@ const Navbar = () => {
         <li className={linkClass('/about')}>
           <Link to="/about">ABOUT</Link>
         </li>
+        <li className={linkClass('/skills')}>
+          <Link to="/skills">SKILLS</Link>
+        </li>
         <li className={linkClass('/projects')}>
           <Link to="/projects">PROJECTS</Link>
         </li>
@@ -79,8 +82,11 @@ const Navbar = () => {
               <li className={mobileLinkClass('/')}>
                 <Link to="/" onClick={handleNav} className="block">Home</Link>
               </li>
-              <li className={mobileLinkClass('/about')}>
+               <li className={mobileLinkClass('/about')}>
                 <Link to="/about" onClick={handleNav} className="block">About</Link>
+              </li>
+              <li className={mobileLinkClass('/skills')}>
+                <Link to="/skills" onClick={handleNav} className="block">Skills</Link>
               </li>
               <li className={mobileLinkClass('/projects')}>
                 <Link to="/projects" onClick={handleNav} className="block">Projects</Link>
@@ -88,7 +94,7 @@ const Navbar = () => {
               <li className={mobileLinkClass('/contacts')}>
                 <Link to="/contacts" onClick={handleNav} className="block">Contact</Link>
               </li>
-                  <li className={mobileLinkClass('/contacts')}>
+                  <li className={mobileLinkClass('/resume')}>
                 <Link to="/resume" onClick={handleNav} className="block">Resume</Link>
               </li>
             </ul>
