@@ -51,47 +51,7 @@ const ProjectsPage = () => {
 
         {/* Development Project Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <motion.div 
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            onClick={handleDevProjectClick}
-          >
-            <img src={startupImg} alt="InspireSpace project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
-            <h3 className="text-xl text-white font-semibold mb-2">InspireSpace</h3>
-            <p className="text-gray-300 mb-4">A dynamic online platform designed to ignite creativity and foster collaboration among hobbyists...</p>
-            <a href="#" className="text-blue-500 hover:underline">Built with: HTML, CSS, JavaScript</a>
-          </motion.div>
-
-          <motion.div 
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            onClick={handleDevProjectClick}
-          >
-            <img src={deeptokImg} alt="Deeptok project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
-            <h3 className="text-xl text-white font-semibold mb-2">Deeptok</h3>
-            <p className="text-gray-300 mb-4">A responsive web application designed to generate unique questions that inspire deep and meaningful conversations...</p>
-            <a href="#" className="text-blue-500 hover:underline">Built with: Vite, React, Tailwind CSS</a>
-          </motion.div>
-
-          <motion.div 
-            className="bg-gray-800 p-6 rounded-lg shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            onClick={handleDevProjectClick}
-          >
-            <img src={fastfoodImg} alt="Fastfood project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
-            <h3 className="text-xl text-white font-semibold mb-2">Fastfood Management System</h3>
-            <p className="text-gray-300 mb-4">It enables efficient management of menu items, order processing, and customer interactions...</p>
-            <a href="#" className="text-blue-500 hover:underline">Built with: Java</a>
-          </motion.div>
+          
 
           {/* Add Cvsu Dashboard Design Project */}
           <motion.div 
@@ -104,7 +64,7 @@ const ProjectsPage = () => {
             <img src={cvsuImg} alt="Cvsu Dashboard Design project thumbnail" className="w-full h-40 object-cover rounded-lg mb-4" />
             <h3 className="text-xl text-white font-semibold mb-2">Cvsu Dashboard Design</h3>
             <p className="text-gray-300 mb-4">A modern and responsive dashboard design for the university portal...</p>
-            <a href="https://cvsu-portal.vercel.app/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Project</a>
+            <a href="https://cvsu-system.vercel.app/" className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">View Project</a>
           </motion.div>
         </div>
 
