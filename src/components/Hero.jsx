@@ -27,11 +27,13 @@ const Hero = () => {
               <span className='glitch-text'>
                 <TypeAnimation
                   sequence={[
-                    "Full-Stack Dev",
+                    "Boyfriend",
                     1000,
-                    "Web Designer",
+                    "ni",
                     1000,
-                    "Visual Artist",
+                    "Jasmine Joy ",
+                    1000,
+                    "Maxey",
                     1000,
                   ]}
                   wrapper='span'
