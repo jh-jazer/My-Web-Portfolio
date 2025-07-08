@@ -1,8 +1,10 @@
 import Navbar from '../components/Navbar';
 import { motion } from 'framer-motion';
-import cvsuImg from '../assets/cvsu.png';  // Import the new project image
+import cvsuImg from '../assets/cvsu 1.jpg';  
+import gameImg from '../assets/game.jpg';// Import the new project image
 import Footer from '../components/Footer';
-import { SiReact, SiTailwindcss, SiFigma } from 'react-icons/si';
+import { SiReact, SiTailwindcss, SiFigma, SiPython } from 'react-icons/si';
+import { FaGamepad } from 'react-icons/fa'; // Use FaGamepad for game dev
 
 
 // Import art project images
@@ -85,6 +87,42 @@ is a responsive university portal built with React and Tailwind CSS. It provides
             View Project
           </a>
         </motion.div>
+
+        <motion.div 
+  className="bg-gray-800 p-6 rounded-lg shadow-lg"
+  whileHover={{ scale: 1.05 }}
+  initial="hidden"
+  animate="visible"
+  variants={cardVariants}
+>
+  <img 
+    src={gameImg} 
+    alt="World: Last Light game thumbnail" 
+    className="w-full h-40 object-cover rounded-lg mb-4" 
+  />
+  <h3 className="text-xl text-white font-semibold mb-2">World Last Light</h3>
+  <p className="text-gray-300 mb-4">
+A narrative-driven 2D game made in Godot. You play as a burned-out student isekai’d into a collapsing world. Features custom combat, UI, and immersive story design focused on survival and mental resilience.  </p>
+
+  {/* 🔧 Technology Icons Section */}
+  <div className="flex items-center gap-4 mb-4">
+    <div className="flex items-center text-gray-300 gap-2">
+      <FaGamepad size={24} title="Godot Engine" />
+      <SiPython size={24} title="GDScript" />
+      <SiFigma size={24} title="Figma" />
+    </div>
+  </div>
+
+  <a 
+    href="https://github.com/jh-jazer/worldlastlight.git" 
+    className="text-blue-500 hover:underline" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    View Project
+  </a>
+</motion.div>
+
         </div>
 
         {/* Art Projects Section */}

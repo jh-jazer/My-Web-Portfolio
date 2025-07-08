@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { FaCode, FaPaintBrush, FaTools } from 'react-icons/fa';
+import { FaCode, FaPaintBrush, FaStar, FaCubes, FaPencilRuler, FaCodeBranch, FaLaptopCode } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 const Skills = () => {
@@ -36,26 +36,77 @@ const Skills = () => {
 — Robert Greene            </p>
           </motion.div>
         </div>
-        <motion.section className="mb-16 text-left" variants={fadeIn}>
-          <div className="space-y-5 ml-6">
-            <div className="flex items-start text-gray-300">
-              <FaCode className="text-blue-400 text-3xl mr-4 mt-1" />
-              <p><strong>Programming Languages:</strong> JavaScript, HTML, CSS, Python, Java</p>
-            </div>
-            <div className="flex items-start text-gray-300">
-              <FaTools className="text-blue-400 text-3xl mr-4 mt-1" />
-              <p><strong>Frameworks & Libraries:</strong> React, Tailwind CSS, Flask, Vite, Node.js</p>
-            </div>
-            <div className="flex items-start text-gray-300">
-              <FaPaintBrush className="text-blue-400 text-3xl mr-4 mt-1" />
-              <p><strong>Design Tools:</strong> Figma, Canva, Adobe Photoshop</p>
-            </div>
-            <div className="flex items-start text-gray-300">
-              <FaTools className="text-blue-400 text-3xl mr-4 mt-1" />
-              <p><strong>Version Control:</strong> Git, GitHub</p>
-            </div>
-          </div>
-        </motion.section>
+      <motion.section className="mb-16 text-left" variants={fadeIn}>
+  <div className="space-y-5 ml-6">
+    <div className="flex items-start text-gray-300">
+      <FaCode className="text-blue-400 text-3xl mr-4 mt-1" />
+      <p>
+        <strong>Programming & Scripting:</strong> Proficient in JavaScript, HTML, CSS, Python, and Java — suitable for both web development and academic computing tasks.
+      </p>
+    </div>
+    <div className="flex items-start text-gray-300">
+      <FaCubes className="text-blue-400 text-3xl mr-4 mt-1" />
+      <p>
+        <strong>Frameworks & Libraries:</strong> Experienced in React, Tailwind CSS, Flask, Vite, and Node.js — enabling full-stack web development and rapid prototyping.
+      </p>
+    </div>
+    <div className="flex items-start text-gray-300">
+      <FaPencilRuler className="text-blue-400 text-3xl mr-4 mt-1" />
+      <p>
+        <strong>Design & UI/UX:</strong> Skilled in Figma, Canva, and Adobe Photoshop — with a strong sense for user-centered interface design and digital creativity.
+      </p>
+    </div>
+    <div className="flex items-start text-gray-300">
+      <FaCodeBranch className="text-blue-400 text-3xl mr-4 mt-1" />
+      <p>
+        <strong>Version Control & Collaboration:</strong> Familiar with Git and GitHub — supporting agile workflows, collaboration, and project management.
+      </p>
+    </div>
+    <div className="flex items-start text-gray-300">
+      <FaLaptopCode className="text-blue-400 text-3xl mr-4 mt-1" />
+      <div>
+       <p className="font-bold">Tech Versatility:</p>
+       
+    <ul className="list-disc list-inside">
+      <li>Comfortable with both frontend and backend workflows</li>
+      <li>Experience in cross-functional development and design roles</li>
+      <li>Strong foundation in problem-solving and adaptability</li>
+      <li>Developed 2D and 3D games using Godot — combining programming, UI design, and logic systems</li>
+    </ul>
+    </div>
+    </div>
+
+    {/* NEW SECTION: Other Skills */}
+    <div className="flex items-start text-gray-300">
+      <FaStar className="text-blue-400 text-3xl mr-4 mt-1" />
+       <div>
+        <p className="font-bold">Other Skills & Interests:</p>
+        <ul className="list-disc list-inside">
+          <li>
+            Typing speed: 
+            <a href="https://monkeytype.com/profile/E_Dyiy" target="_blank" className="underline text-blue-300 hover:text-blue-200"> 90+ WPM
+            </a>
+          </li>
+          <li>
+            Chess: 
+             in top 0.3% globally in rapid chess (
+            <a href="https://www.chess.com/member/jcedjank/stats/rapid" target="_blank" className="underline text-blue-300 hover:text-blue-200">
+              Chess.com
+            </a>)
+          </li>
+          <li>
+  Grew an Instagram account to 
+  <a href="https://www.instagram.com/jh_evan/" target="_blank" className="underline text-blue-300 hover:text-blue-200"> 3,500+ followers
+  </a> in 2024 by applying strategic content creation and engagement techniques
+</li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</motion.section>
+
+
   
 
         {/* Link to Projects */}
@@ -69,8 +120,7 @@ const Skills = () => {
 
        {/* Final Statement */}
         <motion.p className="text-lg text-gray-300 leading-relaxed tracking-wide mt-12" variants={fadeIn}>
-          I strive for clean, minimalist designs that emphasize functionality and elegance. With a commitment to innovation and creativity, I aim to craft experiences that truly resonate.
-        </motion.p>
+I strive to continuously expand my expertise across the diverse domains of Computer Science and Information Technology — from software development and UI/UX design to systems thinking and data-driven problem solving. With a strong foundation in both technical and creative disciplines, I’m committed to building clean, functional, and user-centered solutions that reflect innovation, efficiency, and thoughtful design.        </motion.p>
       </motion.div>
       <Footer />
     </div>

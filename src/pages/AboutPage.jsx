@@ -32,29 +32,36 @@ const About = () => {
           <div className="border-l-2 mt-[40px] border-gray-400 h-40 mx-6"></div>
           <motion.div className="text-xl mt-[120px] text-left text-gray-300 leading-relaxed tracking-wide hidden md:block" variants={fadeIn}>
             <p className="ml-4">
-              I'm dedicated to designing visually captivating and highly functional web interfaces, combining creativity with a deep understanding of development.
-            </p>
+            I'm deeply dedicated to learning and expanding my skills in web development, constantly exploring new tools, techniques, and creative approaches to build better, more functional interfaces.
+          </p>
+
           </motion.div>
         </div>
            <div>
-          <p className="text-lg text-gray-300 text-left leading-relaxed tracking-wide">
-            Hello! I'm <span className="text-blue-400 font-semibold">Ernesto Jr. C. Desabille</span> — or just EJ. I'm currently a third-year Computer Science student with a strong focus on <span className="text-blue-400">front-end development</span>, <span className="text-blue-400">web design</span>, and <span className="text-blue-400">graphic design</span>.
-            <br /><br />
-          </p>
+         <p className="text-lg text-gray-300 text-left leading-relaxed tracking-wide">
+  Hello! I'm <span className="text-blue-400 font-semibold">Ernesto Jr. C. Desabille</span> — or just EJ. I'm a graduating Computer Science student with a strong focus on <span className="text-blue-400">front-end development</span>, <span className="text-blue-400">web design</span>, and <span className="text-blue-400">graphic design</span>.
+  <br /><br />
+  I also have hobbies and passions both inside and outside the world of tech, which keep me curious, creative, and always eager to grow.
+</p>
+
+
           </div>
 
        
 
         {/* Section 3: Hobbies */}
-        <motion.section className="my-16" variants={fadeIn}>
-          <h2 className="text-4xl font-bold text-white mb-6 text-center">Hobbies & Passions</h2>
-          <p className="text-lg text-gray-300 text-left leading-relaxed tracking-wide">
-            When I'm not coding, I turn to art. I'm a visual artist passionate about both digital and traditional media.
-            I love sketching, painting, and exploring new visual styles that blend technology and expression.
-            <br /><br />
-            Art allows me to tell stories beyond code — a brushstroke or a color gradient can speak volumes. My work often merges clean design with personal emotion, whether it's on a digital canvas or a physical sketchpad.
-          </p>
-        </motion.section>
+       <motion.section className="my-16" variants={fadeIn}>
+  <h2 className="text-4xl font-bold text-white mb-6 text-center">Hobbies & Passions</h2>
+  <p className="text-lg text-gray-300 text-left leading-relaxed tracking-wide">
+    When I'm not coding, I turn to art. I'm a visual artist passionate about both digital and traditional media.
+    I love sketching, painting, and exploring new visual styles that blend technology and expression.
+    <br /><br />
+    Art allows me to tell stories beyond code — a brushstroke or a color gradient can speak volumes. My work often merges clean design with personal emotion, whether it's on a digital canvas or a physical sketchpad.
+    <br /><br />
+    I also love playing chess. The game's emphasis on strategy, patience, and critical thinking challenges me to stay sharp — qualities that translate directly into how I approach problem-solving and development projects.
+  </p>
+</motion.section>
+
 
         {/* Link to Projects */}
         <motion.div className="flex justify-center mt-8" variants={fadeIn}>

@@ -29,8 +29,6 @@ const Hero = () => {
                   sequence={[
                     "Full-Stack Dev",
                     1000,
-                    "Game Developer",
-                    1000,
                     "Web Designer",
                     1000,
                     "Visual Artist",
@@ -42,17 +40,17 @@ const Hero = () => {
                 />
               </span>
             </h3>
-            <div>
-              <p className="font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white">
-                I turn ideas into
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/projects">PROJECTS</Link>
-                </span>
-                and craft seamless, interactive experiences with clean, efficient code. Minimalism drives my design, where I find beauty in simplicity and order. Let’s connect!
-                <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">                  <Link to="/contacts">CONTACT</Link>
-                </span>
-                me to collaborate or chat.
-              </p>
-            </div>
+           <div>
+            <p className="font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white">
+              I’m passionate about turning ideas into <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">
+                <Link to="/projects">PROJECTS</Link>
+              </span> and bringing them to life through code. While I’m still growing my experience, I’m eager to learn, adapt, and explore new areas across the tech world. Whether it's software development, web technologies, or something entirely new, I’m committed to building my skills and making a meaningful contribution. 
+              <span className="font-bold cursor-pointer hover:text-blue-500 ml-2 mr-2">
+                <Link to="/contacts">CONTACT</Link>
+              </span> me — I’d love to connect and see how I can grow with your team.
+            </p>
+          </div>
+
             <div>
               <p className='font-roboto bottom-0 leading-loose tracking-widest md:ml-[10%] lg:ml-[6%] lg:mr-[0%] lg:mb-[5%] lg:mt-[5%] md:mr-[0%] ml-[15%] mr-[10%] mt-[10%] text-base text-white'>
                 <span className="font-bold ml-2 cursor-pointer hover:text-blue-500">                  <Link to="/about">See More About Me</Link>
