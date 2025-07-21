@@ -76,7 +76,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {nav && (
-        <div className='fixed top-0 left-0 w-full h-full bg-[#232323] text-gray-400 z-50 ease-in-out duration-500 flex justify-center items-center pt-[150px]'>
+        <div className='fixed top-20 mt-12 left-0 w-full h-full bg-[#232323] text-gray-400 z-50 ease-in-out duration-500 flex justify-center items-center pt-[150px]'>
           <div className='w-full'>
             <ul className='text-center text-3xl font-semibold px-8'>
               <li className={mobileLinkClass('/')}>
@@ -96,6 +96,16 @@ const Navbar = () => {
               </li>
                   <li className={mobileLinkClass('/resume')}>
                 <Link to="/resume" onClick={handleNav} className="block">Resume</Link>
+              </li>
+                {/* Close Option */}
+              <li>
+                <button
+                  onClick={handleNav}
+                  className="mt-8 p-4 text-xl bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors w-full"
+                  aria-label="Close Menu"
+                >
+                  Close
+                </button>
               </li>
             </ul>
           </div>
